@@ -1,0 +1,60 @@
+.logo-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1.1rem;
+  max-width: 900px;
+}
+
+.logo-skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1.8rem 1rem;
+  background: rgba(17, 17, 22, 0.65);
+  border: 1px solid var(--steel, #3a3f4b);
+  opacity: 0;
+  transform: translateY(14px);
+  animation: skillCardIn 0.5s ease forwards;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.logo-skill-card:hover {
+  border-color: var(--accent, #e6283c);
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px rgba(230, 40, 60, 0.25);
+}
+
+@keyframes skillCardIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.logo-skill-icon {
+  font-size: 2.6rem;
+  line-height: 1;
+  filter: grayscale(0.15);
+  transition: filter 0.25s ease, transform 0.25s ease;
+}
+
+.logo-skill-card:hover .logo-skill-icon {
+  filter: grayscale(0);
+  transform: scale(1.08);
+}
+
+/* Icons that render as solid black/dark glyphs (Three.js, AWS, Linux)
+   need inverting so they're visible on the dark background. */
+.logo-skill-icon-invert {
+  filter: invert(1) brightness(1.6);
+}
+.logo-skill-card:hover .logo-skill-icon-invert {
+  filter: invert(1) brightness(1.9);
+}
+
+.logo-skill-name {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dim, #8b8a86);
+}

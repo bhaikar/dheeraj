@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kenji Sato · Path</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&family=Shippori+Mincho+B1:wght@500;700&family=JetBrains+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.15.1/devicon.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="page" id="top">
+
+  <div id="bg-canvas"></div>
+  <div class="scanlines"></div>
+  <div class="vignette"></div>
+  <div class="noise"></div>
+
+  <nav class="nav">
+    <a class="brand" href="index.html">
+      <span class="brand-kanji">侍</span>
+      <span class="brand-name">KENJI&nbsp;SATO</span>
+    </a>
+
+    <div class="nav-links">
+      <a class="nav-item" href="index.html">
+        <span class="nav-item-label"><span class="nav-item-kanji">家</span><span class="nav-item-text">HOME</span></span>
+        <span class="nav-item-underline"></span>
+      </a>
+      <a class="nav-item" href="about.html">
+        <span class="nav-item-label"><span class="nav-item-kanji">経</span><span class="nav-item-text">ABOUT</span></span>
+        <span class="nav-item-underline"></span>
+      </a>
+      <a class="nav-item" href="skills.html">
+        <span class="nav-item-label"><span class="nav-item-kanji">武</span><span class="nav-item-text">SKILLS</span></span>
+        <span class="nav-item-underline"></span>
+      </a>
+      <a class="nav-item" href="projects.html">
+        <span class="nav-item-label"><span class="nav-item-kanji">任</span><span class="nav-item-text">WORK</span></span>
+        <span class="nav-item-underline"></span>
+      </a>
+      <a class="nav-item active" href="experience.html">
+        <span class="nav-item-label"><span class="nav-item-kanji">道</span><span class="nav-item-text">PATH</span></span>
+        <span class="nav-item-underline"></span>
+      </a>
+      <a class="nav-item" href="contact.html">
+        <span class="nav-item-label"><span class="nav-item-kanji">連</span><span class="nav-item-text">CONTACT</span></span>
+        <span class="nav-item-underline"></span>
+      </a>
+    </div>
+
+    <button class="nav-burger" data-nav-burger aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" data-menu-close aria-label="Close menu">✕</button>
+    <a class="mobile-menu-item" href="index.html"><span class="nav-item-kanji">家</span><span class="nav-item-text">HOME</span></a>
+    <a class="mobile-menu-item" href="about.html"><span class="nav-item-kanji">経</span><span class="nav-item-text">ABOUT</span></a>
+    <a class="mobile-menu-item" href="skills.html"><span class="nav-item-kanji">武</span><span class="nav-item-text">SKILLS</span></a>
+    <a class="mobile-menu-item" href="projects.html"><span class="nav-item-kanji">任</span><span class="nav-item-text">WORK</span></a>
+    <a class="mobile-menu-item active" href="experience.html"><span class="nav-item-kanji">道</span><span class="nav-item-text">PATH</span></a>
+    <a class="mobile-menu-item" href="contact.html"><span class="nav-item-kanji">連</span><span class="nav-item-text">CONTACT</span></a>
+  </div>
+
+  <main class="main">
+    <section class="section">
+      <div class="section-head">
+        <span class="section-kanji">年代記</span>
+        <h2 class="section-title">CHRONICLE</h2>
+        <span class="section-rule"></span>
+      </div>
+      <p class="section-sub">2017 — PRESENT</p>
+      <div class="timeline">
+
+        <div class="timeline-item" style="animation-delay:.05s;">
+          <span class="timeline-dot"></span>
+          <div class="timeline-date">2023 — PRESENT</div>
+          <h3 class="timeline-role">Principal Engineer · Kurogane Systems</h3>
+          <p class="timeline-desc">Own the realtime platform behind 40k concurrent sessions. Rebuilt the event bus, cut infrastructure spend 38%, mentor a team of six.</p>
+        </div>
+
+        <div class="timeline-item" style="animation-delay:.14s;">
+          <span class="timeline-dot"></span>
+          <div class="timeline-date">2020 — 2023</div>
+          <h3 class="timeline-role">Senior Full-Stack · Akari Labs</h3>
+          <p class="timeline-desc">Led the WebGL product suite from prototype to 120k monthly users. Built the internal design system still in use today.</p>
+        </div>
+
+        <div class="timeline-item" style="animation-delay:.23s;">
+          <span class="timeline-dot"></span>
+          <div class="timeline-date">2018 — 2020</div>
+          <h3 class="timeline-role">Backend Engineer · Shibuya Freight</h3>
+          <p class="timeline-desc">Logistics routing at national scale. Replaced a nightly batch with a streaming pipeline; dispatch decisions went from hours to seconds.</p>
+        </div>
+
+        <div class="timeline-item" style="animation-delay:.32s;">
+          <span class="timeline-dot muted"></span>
+          <div class="timeline-date muted">2017 — 2018</div>
+          <h3 class="timeline-role">Apprentice · basement, Shibuya</h3>
+          <p class="timeline-desc">Freelance builds, questionable PHP, and the first lesson that stuck: the fix is almost always deleting something.</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col footer-brand-col">
+        <a class="footer-brand" href="index.html">
+          <span class="footer-brand-kanji">侍</span>
+          <span class="footer-brand-name">KENJI SATO</span>
+        </a>
+        <p class="footer-tagline">Full-Stack Developer // Digital Ronin</p>
+      </div>
+      <div class="footer-col">
+        <span class="footer-col-title">Navigate</span>
+        <a class="footer-link" href="index.html">Home</a>
+        <a class="footer-link" href="about.html">About</a>
+        <a class="footer-link" href="skills.html">Skills</a>
+        <a class="footer-link" href="projects.html">Work</a>
+        <a class="footer-link" href="experience.html">Experience</a>
+        <a class="footer-link" href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-col-title">Connect</span>
+        <a class="footer-link" href="https://github.com" target="_blank" rel="noreferrer"><i class="devicon-github-original footer-link-icon" aria-hidden="true"></i>GitHub</a>
+        <a class="footer-link" href="https://linkedin.com" target="_blank" rel="noreferrer"><i class="devicon-linkedin-plain footer-link-icon" aria-hidden="true"></i>LinkedIn</a>
+        <a class="footer-link" href="mailto:kenji@ronin.dev"><svg class="footer-link-icon footer-link-icon-mail" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" focusable="false"><path d="M3.5 5.5h17a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-17a1 1 0 0 1-1-1v-11a1 1 0 0 1 1-1Z" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M3.2 6.4l8.3 6.2a1 1 0 0 0 1.2 0l8.3-6.2" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Email</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 KENJI SATO</span>
+      <span class="footer-kanji-tag">忠義 · 名誉 · 精度</span>
+      <a class="footer-top" href="#top">↑ TOP</a>
+    </div>
+  </footer>
+</div>
+
+<script src="https://unpkg.com/three@0.128.0/build/three.min.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>
