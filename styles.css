@@ -396,9 +396,12 @@ img { max-width: 100%; }
 
 .project-badge {
   display: inline-block; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase;
-  padding: 4px 8px; border: 1px solid var(--border); color: var(--muted); white-space: nowrap;
+  padding: 4px 8px; border: 1px solid var(--text); color: var(--text); white-space: nowrap;
 }
-.project-badge-accent { border-color: var(--accent); color: var(--accent); }
+.project-badge-accent {
+  border-color: var(--text);
+  color: var(--text);
+}
 
 /* Repo / live-link icon row — shared by full and compact cards */
 .project-links { display: flex; align-items: center; gap: 10px; margin-top: 16px; }
