@@ -120,7 +120,7 @@
     if (!host) return;
 
     var scene = new THREE.Scene();
-    scene.fog = new THREE.FogExp2(0x0a0a0d, 0.035);
+    scene.fog = new THREE.FogExp2(0x0a0a0a, 0.035);
     var camera = new THREE.PerspectiveCamera(42, host.clientWidth / host.clientHeight, 0.1, 120);
     camera.position.set(0, 0, 15);
 
@@ -130,9 +130,9 @@
     host.appendChild(renderer.domElement);
 
     scene.add(new THREE.AmbientLight(0x2a2f3b, 1.4));
-    var key = new THREE.DirectionalLight(0xe6283c, 2.6); key.position.set(-6, 5, 7); scene.add(key);
-    var rim = new THREE.DirectionalLight(0xf0ede4, 1.1); rim.position.set(7, -3, -5); scene.add(rim);
-    var glow = new THREE.PointLight(0xe6283c, 2.2, 26); glow.position.set(2, 1, 4); scene.add(glow);
+    var key = new THREE.DirectionalLight(0xf5f5f5, 2.6); key.position.set(-6, 5, 7); scene.add(key);
+    var rim = new THREE.DirectionalLight(0xf5f5f5, 1.1); rim.position.set(7, -3, -5); scene.add(rim);
+    var glow = new THREE.PointLight(0xffffff, 3.2, 32); glow.position.set(2, 1, 4); scene.add(glow);
 
     // volumetric smoke plumes (soft billboard puffs)
     var cv = document.createElement('canvas'); cv.width = cv.height = 128;
@@ -152,7 +152,7 @@
     for (var i = 0; i < PUFFS; i++) {
       var mat = new THREE.SpriteMaterial({
         map: puffTex,
-        color: 0xf0ede4,
+        color: 0xf5f5f5,
         transparent: true,
         opacity: 0.045 + Math.random() * 0.045,
         depthWrite: false,
@@ -167,13 +167,13 @@
       pivot.add(s);
     }
 
-    // ember / sakura petal field
+    // glow particle field
     var COUNT = 520;
     var geo = new THREE.BufferGeometry();
     var arr = new Float32Array(COUNT * 3);
     var vel = new Float32Array(COUNT * 3);
     var cols = new Float32Array(COUNT * 3);
-    var c1 = new THREE.Color(0xe6283c), c2 = new THREE.Color(0xff8a5c), c3 = new THREE.Color(0xf0ede4);
+    var c1 = new THREE.Color(0xf5f5f5), c2 = new THREE.Color(0xbdbdbd), c3 = new THREE.Color(0xffffff);
     for (var j = 0; j < COUNT; j++) {
       arr[j * 3] = (Math.random() - 0.5) * 34;
       arr[j * 3 + 1] = (Math.random() - 0.5) * 26;

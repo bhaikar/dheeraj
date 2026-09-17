@@ -12,18 +12,19 @@
   justify-content: center;
   gap: 0.8rem;
   padding: 1.8rem 1rem;
-  background: rgba(17, 17, 22, 0.65);
-  border: 1px solid var(--steel, #3a3f4b);
+  background: rgba(20, 20, 20, 0.65);
+  border: 1px solid var(--steel, #6b6b6b);
   opacity: 0;
   transform: translateY(14px);
   animation: skillCardIn 0.5s ease forwards;
   transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  color: var(--text, #ffffff);
 }
 
 .logo-skill-card:hover {
-  border-color: var(--accent, #e6283c);
+  border-color: var(--accent, #ffffff);
   transform: translateY(-4px);
-  box-shadow: 0 0 20px rgba(230, 40, 60, 0.25);
+  box-shadow: 0 0 20px rgba(var(--accent-glow-rgb, 255, 255, 255), 0.25);
 }
 
 @keyframes skillCardIn {
@@ -56,5 +57,5 @@
   font-size: 0.72rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--text-dim, #8b8a86);
+  color:white ; 
 }
